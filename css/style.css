@@ -40,6 +40,7 @@ body {
 
 .layout_padding2 {
   padding: 45px 0;
+  display: flex;
 }
 
 .layout_padding2-top {
@@ -241,7 +242,7 @@ a:focus {
   margin-left: auto;
   margin-right: auto;
   padding: 75px 45px;
-  background-image: url(../images/about_5_demo.jpg);
+  /* background-image: url(../images/about_5_demo.jpg); */
   background-size: auto 100%;
   background-color: #fff;
   background-position: center;
@@ -254,18 +255,15 @@ a:focus {
 .about_section .about_container .container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: inline;
 }
 
 .about_section .about_container .container > div {
-  width: 46%;
+  width: 100%;
 }
 
 .about_section .detail a {
-  display: inline-block;
+  display: inline;
   padding: 14px 35px;
   background-color: transparent;
   border: 1.5px solid #000000;
@@ -317,6 +315,43 @@ a:focus {
 
 .product_section .img-box.box-2, .product_section .img-box.box-4 {
   width: 50%;
+}
+.product_section .img-box-1 img {
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.product_section .img-box-1{
+  width: 33%;
+  position: relative;
+}
+.img-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  color: #fff;
+  display: flex;
+  
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 10px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.img-box-1:hover .img-info {
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.emote{
+  width: 20px;
+  height: 20px;
+  position: relative;
 }
 
 .product_section a {
@@ -440,8 +475,8 @@ a:focus {
   min-width: 225px;
   min-height: 225px;
   border-radius: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#afad04), to(#5da802));
-  background: linear-gradient(to right, #afad04, #5da802);
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ff0000));
+  background: linear-gradient(to right, #ffffff, #000000);
   margin-right: 15px;
 }
 
@@ -452,7 +487,7 @@ a:focus {
 .client_section .detail_box {
   padding: 25px;
   background: -webkit-gradient(linear, left top, left bottom, from(#afad04), to(#5da802));
-  background: linear-gradient(to bottom, #afad04, #5da802);
+  background: linear-gradient(to left, #ffffff, #000000);
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,7 +534,7 @@ a:focus {
 }
 
 .info_section {
-  background-image: url(../images/anhbia.png);
+  background-image: url(../images/bg_5_demo.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -571,10 +606,11 @@ a:focus {
   position: relative;
 }
 
+
 /* footer section*/
 .footer_section {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 5px;
   font-weight: 500;
 }
 
