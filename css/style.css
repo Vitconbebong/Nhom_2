@@ -74,6 +74,12 @@ body {
 }
 
 /*header section*/
+.img_poster{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  height:90vh;
+}
 .hero_area {
   height: 98vh;
   background-image: url(../images/bg_5_demo.jpg);
